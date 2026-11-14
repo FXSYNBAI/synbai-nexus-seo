@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07100c">
+  <title>SYNBAI FX | XAUUSD Strategy Research &amp; MT5 Backtesting</title>
+  <meta name="description" content="Research XAUUSD trading strategies with transparent costs, chronological holdout, walk-forward analysis and Monte Carlo robustness checks. Built for MT5 traders who want evidence before execution.">
+  <link rel="canonical" href="https://fxsynbai.eu/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SYNBAI FX">
+  <meta property="og:title" content="SYNBAI FX — Research the strategy before the trade">
+  <meta property="og:description" content="A focused research workflow for MT5 and XAUUSD: test historical ideas, inspect out-of-sample evidence, and challenge robustness before you decide what to do next.">
+  <meta property="og:url" content="https://fxsynbai.eu/">
+  <meta property="og:image" content="https://fxsynbai.eu/assets/research-cockpit.webp">
+  <meta property="og:image:alt" content="SYNBAI FX research cockpit with gold market charts and analytical panels">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SYNBAI FX | XAUUSD strategy research">
+  <meta name="twitter:description" content="Test, validate and challenge MT5 strategy ideas using historical market data. Research tools, not return promises.">
+  <meta name="twitter:image" content="https://fxsynbai.eu/assets/research-cockpit.webp">
+  <link rel="preload" as="image" href="assets/gold-xauusd.webp" fetchpriority="high">
+  <link rel="stylesheet" href="styles.css">
+  
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="SYNBAI FX home"><span class="brand-mark" aria-hidden="true">S</span><span class="brand-name">SYNBAI <i>FX</i><small>RESEARCH NETWORK</small></span></a>
+    <nav aria-label="Main navigation"><a href="#workflow">Workflow</a><a href="#validation">Validation</a><a href="#network">Network model</a><a href="#faq">FAQ</a><a class="nav-cta" href="#product">Explore the platform <span aria-hidden="true">↗</span></a></nav>
+  </header>
+
+  <main id="top">
+    <section class="hero shell">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="pulse"></span> MT5 strategy research · XAUUSD focus</p>
+        <h1>Research the strategy.<br><span>Challenge the evidence.</span></h1>
+        <p class="hero-lead">SYNBAI Nexus is a desktop research lab for traders who want to examine a trading idea against historical market data before taking it any further.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#workflow">Explore the research workflow <span aria-hidden="true">↓</span></a><a class="text-link" href="#validation">See how validation works <span aria-hidden="true">→</span></a></div>
+        <div class="hero-note"><span aria-hidden="true">✳</span> Local-first research. Your data and decisions stay in your hands.</div>
+      </div>
+      <figure class="hero-art"><img src="assets/gold-xauusd.webp" alt="Gold XAUUSD market research artwork with a chart and global trading network" width="1536" height="1024" fetchpriority="high"><figcaption><span>01 / MARKET FOCUS</span><span>XAUUSD · MT5 HISTORY</span></figcaption></figure>
+      <div class="hero-index" aria-hidden="true">NEXUS / 001</div>
+    </section>
+
+    <section class="proof-strip" aria-label="Research workflow principles"><div class="shell proof-inner"><span>HISTORICAL DATA</span><b>→</b><span>RULE-BASED SEARCH</span><b>→</b><span>OUT-OF-SAMPLE REVIEW</span><b>→</b><span>HUMAN DECISION</span></div></section>
+
+    <section class="section shell" id="product">
+      <div class="section-heading"><p class="eyebrow">A clearer way to investigate an idea</p><h2>Trading research that shows its work.</h2><p>Move from a market-history file to a reviewable research candidate. See the assumptions, costs and validation steps that shape each result.</p></div>
+      <div class="feature-grid">
+        <article class="feature-card"><span class="feature-number">01</span><h3>Bring your MT5 history</h3><p>Import historical OHLC data from MetaTrader 5 or begin with the included sample history. Review timestamps, data gaps and market-cost assumptions before running a study.</p><span class="feature-tag">CSV · OHLC · LOCAL DATA</span></article>
+        <article class="feature-card"><span class="feature-number">02</span><h3>Search with defined rules</h3><p>Explore strategy families built around trend, momentum, mean reversion and volatility. Use a guided starting point or adjust research ranges when you need more control.</p><span class="feature-tag">RULE FAMILIES · PARAMETERS</span></article>
+        <article class="feature-card"><span class="feature-number">03</span><h3>Inspect before you decide</h3><p>Compare candidate selection results with separate holdout and robustness views. Keep the historical study as a research artifact you can revisit and question.</p><span class="feature-tag">HOLDOUT · WALK-FORWARD · MONTE CARLO</span></article>
+      </div>
+    </section>
+
+    <section class="image-feature" id="workflow"><div class="shell image-feature-grid"><figure><img src="assets/research-cockpit.webp" alt="A trading strategy research cockpit showing analytics panels and historical market charts" width="1536" height="1024" loading="lazy"><figcaption>RESEARCH COCKPIT / VISUAL CONCEPT</figcaption></figure><div class="image-copy"><p class="eyebrow">A repeatable workflow</p><h2>From raw candles<br>to a research question.</h2><ol class="steps"><li><span>01</span><div><h3>Prepare the data</h3><p>Import a historical CSV and inspect its coverage, timestamps, gaps and symbol assumptions.</p></div></li><li><span>02</span><div><h3>Define the experiment</h3><p>Select a strategy family, set trading costs and choose how the available history is split.</p></div></li><li><span>03</span><div><h3>Challenge the candidate</h3><p>Review the holdout period, walk-forward windows and Monte Carlo sensitivity before drawing conclusions.</p></div></li><li><span>04</span><div><h3>Keep the evidence</h3><p>Archive the run configuration and results so the assumptions remain visible when you return.</p></div></li></ol></div></div></section>
+
+    <section class="section shell validation" id="validation"><div class="validation-intro"><p class="eyebrow">Evidence, with limits made visible</p><h2>A backtest is a question.<br><span>Validation makes it harder.</span></h2><p>Historical simulation can help compare hypotheses. It cannot reproduce every live-market condition, guarantee broker fills or predict future performance.</p></div><div class="validation-list"><article><span class="validation-icon">A/B</span><div><h3>Chronological holdout</h3><p>Candidate ranking uses an in-sample segment; the selected specification is then evaluated against a later holdout segment.</p></div></article><article><span class="validation-icon">↗</span><div><h3>Walk-forward windows</h3><p>Anchored and rolling evaluations give separate views of how a candidate behaves across repeated historical windows.</p></div></article><article><span class="validation-icon">≈</span><div><h3>Monte Carlo sensitivity</h3><p>Resampling completed out-of-sample trades explores result sensitivity. It is not a forecast, tick replay or substitute for live execution testing.</p></div></article><article><span class="validation-icon">∑</span><div><h3>Costs and data context</h3><p>Spread, commission, slippage, point size, timestamps and observed gaps are part of the research record. Unknown source details should stay unknown.</p></div></article></div></section>
+
+    <section class="network-section" id="network"><div class="shell network-grid"><div class="network-copy"><p class="eyebrow">The wider SYNBAI vision</p><h2>One network.<br>Clear data provenance.</h2><p>The SynaptoBotAI prototype schema describes how a market read could be organized into traceable records: a market snapshot, observed liquidity-flow legs, categorized signals, and the source and capture time behind each record.</p><p>This is a documented data model, not a claim that this website currently provides live market scans, on-chain feeds or predictive signals.</p><a class="text-link" href="#faq">Read the product status notes <span aria-hidden="true">↓</span></a></div><figure class="network-art"><img src="assets/neural-nexus.webp" alt="Neural network inspired SYNBAI artwork connecting market research and data signals" width="1536" height="1024" loading="lazy"><figcaption><span>02 / NETWORK CONCEPT</span><span>TRACEABLE INPUTS · HUMAN REVIEW</span></figcaption></figure><div class="schema-cards"><div><span>01</span><strong>Market snapshot</strong><small>Asset, context, source, capture time</small></div><div><span>02</span><strong>Liquidity flows</strong><small>Direction, observed amount, venue, caveat</small></div><div><span>03</span><strong>Research signals</strong><small>Category, horizon, evidence, timestamp</small></div></div></div></section>
+
+    <section class="section shell platform-details"><div class="section-heading"><p class="eyebrow">Built for careful MT5 research</p><h2>Useful context for every stage.</h2></div><div class="detail-grid"><article><h3>Data import and review</h3><p>Bring your own MetaTrader 5 historical CSV. Inspect data quality, observed gaps and inferred symbol details so a clean-looking chart does not hide a flawed input.</p></article><article><h3>Research families</h3><p>Explore documented rule families including moving-average trend, RSI mean reversion, Bollinger and Donchian breakouts, Supertrend and ATR-based approaches.</p></article><article><h3>Local archive</h3><p>Keep research runs, data metadata, selected parameters and validation summaries available on your computer for later comparison.</p></article><article><h3>Source-code export</h3><p>The application can produce MQL5 source for further review. Exported code must be compiled, checked in MetaEditor and tested separately before any use.</p></article></div><div class="callout"><span class="callout-mark">!</span><p><strong>Research software is not a trading service.</strong> SYNBAI Nexus performs historical analysis; it does not place live trades. Historical returns are not account-currency profit forecasts or evidence of future results.</p></div></section>
+
+    <section class="section shell faq" id="faq"><div class="section-heading"><p class="eyebrow">Frequently asked questions</p><h2>Know what the tools do—and what they do not.</h2></div><details><summary>What is SYNBAI FX?</summary><p>SYNBAI FX is the public product and research-information site for SYNBAI Nexus, a Windows desktop application focused on historical strategy research for MT5 data, with an initial emphasis on XAUUSD.</p></details><details><summary>Does SYNBAI Nexus guarantee a profitable strategy?</summary><p>No. Backtests, holdout periods, walk-forward analysis and Monte Carlo summaries describe selected historical data and assumptions. They cannot guarantee future performance, execution quality or a payout.</p></details><details><summary>Does it connect to a live MT5 account or place trades?</summary><p>The product is designed for historical data research and read-only MT5 pairing/import. It does not place trades. Confirm all connection and account behavior in the current product before use.</p></details><details><summary>Can I use the exported MQL5 source immediately?</summary><p>Exported source is a starting point for technical review. It must be compiled and separately validated in MetaEditor and in an appropriate test environment before use. Source export is not proof of correctness or suitability.</p></details><details><summary>Are live AI signals and blockchain data available on this page?</summary><p>No live scan or signal service is represented here. The neural market-flow concepts shown describe a separate documented prototype data model. Availability of any future AI or live-data features will be stated explicitly when implemented.</p></details><details><summary>Where do I get the app and see current availability?</summary><p>Commercial release, pricing and distribution details are not published here yet. Follow the official SYNBAI Nexus account for product updates.</p></details><div class="risk-note"><strong>Risk notice</strong><p>Trading foreign exchange, CFDs and other leveraged products involves substantial risk and may not be suitable for every investor. Historical simulation has limitations, including data quality, spread, slippage, liquidity, latency and model-selection bias. This website is informational and does not provide financial advice.</p></div></section>
+
+    <section class="store-section" id="install"><div class="shell store-panel"><div class="store-icon" aria-hidden="true">▣</div><div class="store-copy"><p class="eyebrow">Windows desktop · official distribution</p><h2>Install SYNBAI Nexus through Microsoft Store.</h2><p>We are preparing the MSIX package and Store submission. The install button will lead directly to Microsoft's official listing after certification.</p></div><a class="store-button" id="store-install-button" href="#install" aria-disabled="true" tabindex="-1">Microsoft Store listing coming soon</a><p class="store-status" id="store-status" role="status">Store release in preparation</p></div></section>
+
+    <section class="closing-cta shell"><div><p class="eyebrow">SYNBAI FX · FXSYNBAI.EU</p><h2>Build a better research habit.</h2><p>Start with the data. Keep the assumptions visible. Make the final decision yourself.</p></div><a class="button button-primary" href="https://x.com/SynbaiNexus" target="_blank" rel="noopener noreferrer">Follow product updates <span aria-hidden="true">↗</span></a></section>
+  </main>
+
+  <footer class="site-footer"><div class="shell footer-grid"><a class="brand" href="#top" aria-label="SYNBAI FX home"><span class="brand-mark" aria-hidden="true">S</span><span class="brand-name">SYNBAI <i>FX</i><small>RESEARCH NETWORK</small></span></a><p>Independent trading research software.<br>Historical analysis, not investment advice.</p><nav aria-label="Footer navigation"><a href="#product">Platform</a><a href="#validation">Validation</a><a href="#install">Microsoft Store</a><a href="#faq">FAQ</a><a href="https://x.com/SynbaiNexus" target="_blank" rel="noopener noreferrer">X / SYNBAI Nexus ↗</a></nav><small class="copyright">© 2026 SYNBAI. All rights reserved.</small></div></footer>
+  
+</body>
+</html>
+
