@@ -1,0 +1,5 @@
+/app /account/ 301
+/app/* /account/ 301
+/fishing /farm/ 301
+/fishing/ /farm/ 301
+/fishing/* /farm/ 301

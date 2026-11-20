@@ -1,4 +1,4 @@
 .claude/
-site/.claude/
-site/static/ui-locales.json
-site/static/downloads/*.mq5
+site/
+static/ui-locales.json
+static/downloads/*.mq5
