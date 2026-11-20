@@ -37,8 +37,19 @@
   overflow: visible;
 }
 
+.app-gallery { padding-top: 88px; padding-bottom: 88px; }
+.app-gallery-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px; }
+.app-gallery article { min-width: 0; }
+.app-gallery figure { margin: 0 0 20px; }
+.app-gallery img { display: block; width: 100%; height: auto; border: 1px solid #39503d; border-radius: 12px; background: #06100c; }
+.app-gallery figcaption { margin-top: 11px; color: #8ea493; font: 9px var(--mono); letter-spacing: .11em; }
+.app-gallery h3 { margin: 0 0 9px; font-size: 22px; }
+.app-gallery p { max-width: 62ch; }
+
 @media (max-width: 900px) {
   .hero-art img,
   .image-feature figure img,
   .network-art img { width: 100%; }
+  .app-gallery { padding-top: 64px; padding-bottom: 64px; }
+  .app-gallery-grid { grid-template-columns: 1fr; }
 }
