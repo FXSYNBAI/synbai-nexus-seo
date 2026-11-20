@@ -1,0 +1,146 @@
+/* SYNBAI Nexus · Solana-palette chrome theme.
+ * Loaded last in <head>, so it overrides the legacy inline styles and the runtime module styles.
+ * Palette inspired by Solana colours (purple #9945FF, green #14F195, cyan #00C2FF); no logos or marks.
+ * Every animation is disabled by prefers-reduced-motion and by the in-app "Reduce motion" setting.
+ */
+:root{
+  --sn-purple:#9945FF; --sn-green:#14F195; --sn-cyan:#00C2FF; --sn-magenta:#DC1FFF;
+  --sn-bg0:#0c0a1f; --sn-bg1:#120d2e; --sn-bg2:#062a26;
+  --sn-panel:rgba(30,20,62,.55); --sn-panel-solid:#171236; --sn-panel2:rgba(22,40,52,.55);
+  --sn-chrome:linear-gradient(135deg,#f5f7ff 0%,#9aa3c7 18%,#ffffff 32%,#8a91b4 52%,#e9ecff 70%,#7a82a6 86%,#f7f8ff 100%);
+  --sn-chrome-line:linear-gradient(120deg,rgba(255,255,255,.55),rgba(153,69,255,.55) 30%,rgba(20,241,149,.55) 60%,rgba(255,255,255,.45));
+  --sn-grad:linear-gradient(90deg,#9945FF,#14F195);
+  --bg:#0c0a1f; --panel:#171236; --panel2:#1b1640; --line:#3a2f6e; --muted:#b4acd9; --text:#ffffff;
+  --green:#14F195; --green2:#0fd182; --amber:#C9A7FF; --blue:#00C2FF; --red:#FF5C8A;
+}
+
+/* ---------- Background: deep green-purple, never black ---------- */
+html body{
+  color:#fff;
+  background:
+    radial-gradient(1200px 700px at 12% -10%,rgba(153,69,255,.38),transparent 60%),
+    radial-gradient(1000px 650px at 95% 15%,rgba(20,241,149,.22),transparent 60%),
+    radial-gradient(900px 600px at 40% 110%,rgba(0,194,255,.16),transparent 60%),
+    linear-gradient(160deg,var(--sn-bg1) 0%,var(--sn-bg0) 45%,var(--sn-bg2) 100%) fixed !important;
+}
+#snAurora{position:fixed;inset:-20%;z-index:0;pointer-events:none;opacity:.55;filter:blur(60px);
+  background:
+    radial-gradient(40% 35% at 20% 30%,rgba(153,69,255,.55),transparent 70%),
+    radial-gradient(35% 30% at 75% 25%,rgba(20,241,149,.35),transparent 70%),
+    radial-gradient(30% 30% at 60% 80%,rgba(0,194,255,.30),transparent 70%),
+    radial-gradient(25% 25% at 30% 85%,rgba(220,31,255,.25),transparent 70%);
+  animation:snAurora 26s ease-in-out infinite alternate}
+@keyframes snAurora{0%{transform:translate3d(0,0,0) rotate(0deg) scale(1)}50%{transform:translate3d(4%,-3%,0) rotate(8deg) scale(1.08)}100%{transform:translate3d(-4%,3%,0) rotate(-6deg) scale(1.03)}}
+#snParticles{position:fixed;inset:0;z-index:0;pointer-events:none}
+.shell,main{position:relative;z-index:1}
+
+/* ---------- Glass panels with chrome edges ---------- */
+html body .card,html body .metric,html body #snCockpit,html body .ck-log,
+html body #ntQuick .nt-panel,html body #gdWorkspace .gd-panel,html body #hmDash .hm-panel,html body #hmDash .hm-kpi,
+html body #dpGenome,html body .gx-robust{
+  background:linear-gradient(160deg,rgba(43,30,92,.62),rgba(18,30,48,.58)) !important;
+  border:1px solid transparent !important;
+  background-clip:padding-box !important;
+  backdrop-filter:blur(14px) saturate(1.2);
+  box-shadow:0 10px 34px rgba(8,4,30,.45),inset 0 1px 0 rgba(255,255,255,.08) !important;
+  position:relative;
+  transition:transform .25s ease,box-shadow .25s ease;
+}
+html body .card::before,html body #snCockpit::before,html body #ntQuick .nt-panel::before,html body #gdWorkspace .gd-panel::before,
+html body #hmDash .hm-panel::before,html body #hmDash .hm-kpi::before,html body #dpGenome::before,html body .metric::before{
+  content:"" !important;position:absolute !important;inset:-1px !important;width:auto !important;height:auto !important;
+  transform:none !important;border-radius:inherit;padding:1px;pointer-events:none;z-index:0;
+  background:var(--sn-chrome-line);background-size:220% 220%;
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;
+  animation:snEdge 9s linear infinite;opacity:.75}
+@keyframes snEdge{0%{background-position:0% 50%}100%{background-position:220% 50%}}
+html body .card:hover,html body #hmDash .hm-kpi:hover,html body .metric:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(153,69,255,.25),inset 0 1px 0 rgba(255,255,255,.1) !important}
+
+/* Inner surfaces that were near-black */
+html body .terminal,html body #dpPreview,html body #dpPreview pre,html body .ck-canvas-wrap,html body #snCockpit canvas,
+html body #ntQuick .nt-card,html body #gdWorkspace .gd-kpi,html body .gd-kpi,html body #ntQuick .nt-field input,html body #ntQuick .nt-field select{
+  background:rgba(14,10,36,.62) !important;border-color:rgba(153,69,255,.28) !important}
+html body input,html body select,html body textarea{background:rgba(14,10,36,.7) !important;border-color:rgba(153,69,255,.35) !important;color:#fff !important}
+html body input:focus,html body select:focus,html body textarea:focus{outline:none;border-color:var(--sn-green) !important;box-shadow:0 0 0 3px rgba(20,241,149,.18)}
+
+/* ---------- Chrome typography ---------- */
+html body h1,html body .gd-title,html body .ck-count,html body #hmDash .hm-kpi b,html body .gd-big,html body .stat{
+  background:var(--sn-chrome);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent !important;
+  animation:snChrome 7s linear infinite}
+html body .gd-big.pos,html body .gd-big.neg{background:none;-webkit-background-clip:border-box;animation:none}
+html body .gd-big.pos{color:var(--sn-green) !important;text-shadow:0 0 18px rgba(20,241,149,.35)}
+html body .gd-big.neg{color:var(--red) !important}
+@keyframes snChrome{0%{background-position:0% 0}100%{background-position:200% 0}}
+html body .eyebrow{background:var(--sn-grad);-webkit-background-clip:text;background-clip:text;color:transparent !important}
+html body .subtitle,html body .hint,html body .footer-note,html body th{color:var(--muted) !important}
+html body td{color:#eef0ff !important;border-bottom-color:rgba(153,69,255,.18) !important}
+html body th{border-bottom-color:rgba(153,69,255,.3) !important}
+
+/* ---------- Buttons: Solana gradient with a chrome sheen sweep ---------- */
+html body .button,html body .nt-go,html body #ntQuick .nt-go{
+  position:relative;overflow:hidden;border:1px solid rgba(255,255,255,.35) !important;
+  background:linear-gradient(100deg,#9945FF 0%,#7a5cff 35%,#19c9b0 75%,#14F195 100%) !important;color:#fff !important;
+  text-shadow:0 1px 2px rgba(20,0,60,.45);box-shadow:0 6px 20px rgba(153,69,255,.35),inset 0 1px 0 rgba(255,255,255,.35);
+  transition:transform .15s ease,box-shadow .2s ease,filter .2s ease}
+html body .button::after,html body .nt-go::after{
+  content:"";position:absolute;top:-50%;left:-60%;width:40%;height:200%;pointer-events:none;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.65),transparent);transform:skewX(-20deg);
+  animation:snSheen 4.5s ease-in-out infinite}
+@keyframes snSheen{0%,55%{left:-60%}80%,100%{left:130%}}
+html body .button:hover:not(:disabled),html body .nt-go:hover:not(:disabled){transform:translateY(-1px);filter:brightness(1.08);box-shadow:0 10px 28px rgba(20,241,149,.35),inset 0 1px 0 rgba(255,255,255,.4)}
+html body .button.secondary{background:linear-gradient(160deg,rgba(60,46,120,.7),rgba(24,36,60,.7)) !important;color:#eef0ff !important;box-shadow:inset 0 1px 0 rgba(255,255,255,.12)}
+html body .button.secondary::after{opacity:.35}
+html body .button.danger,html body .ck-btn.danger{background:linear-gradient(100deg,#6a1240,#a0204f) !important;color:#ffd6e3 !important;border-color:rgba(255,92,138,.5) !important}
+html body .button:disabled{opacity:.4;filter:grayscale(.4)}
+html body .button:disabled::after{display:none}
+
+/* ---------- Badges, chips, tags ---------- */
+html body .badge{border-color:rgba(201,167,255,.4) !important;color:#e9dcff !important;background:rgba(153,69,255,.12)}
+html body .badge.good{color:var(--sn-green) !important;border-color:rgba(20,241,149,.5) !important;background:rgba(20,241,149,.08)}
+html body .badge.warn{color:#ffd28a !important;border-color:rgba(255,210,138,.45) !important}
+html body .nt-chip.on,html body .sn-chips button.on{border-color:var(--sn-green) !important;color:var(--sn-green) !important;background:rgba(20,241,149,.1) !important;box-shadow:0 0 14px rgba(20,241,149,.25)}
+html body #ntQuick .nt-card.on{border-color:var(--sn-green) !important;box-shadow:0 0 0 1px rgba(20,241,149,.4) inset,0 0 22px rgba(20,241,149,.2) !important}
+html body #ntQuick .nt-tf.on b{color:var(--sn-green) !important;text-shadow:0 0 16px rgba(20,241,149,.55)}
+html body #gdList button.on{border-color:var(--sn-green) !important;background:rgba(20,241,149,.08) !important}
+html body .notice{background:rgba(153,69,255,.12) !important;color:#e6dcff !important;border-left-color:var(--sn-purple) !important}
+
+/* ---------- Bottom app bar: glass with an animated Solana underline ---------- */
+html body .rail{background:linear-gradient(180deg,rgba(30,20,66,.82),rgba(10,24,30,.9)) !important;border-top:1px solid transparent !important;backdrop-filter:blur(18px) saturate(1.3)}
+html body .rail::before{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:linear-gradient(90deg,transparent,#9945FF,#14F195,#00C2FF,transparent);background-size:200% 100%;animation:snEdge 6s linear infinite}
+html body .rail .nav button,html body .rail .settings-launch button{color:#d8d2f5 !important;transition:transform .2s ease,color .2s ease,background .2s ease}
+html body .rail .nav button:hover,html body .rail .settings-launch button:hover{transform:translateY(-3px);color:#fff !important;background:rgba(153,69,255,.18) !important}
+html body .rail .nav button.active,html body .rail .settings-launch button.active{color:#fff !important;background:linear-gradient(160deg,rgba(153,69,255,.45),rgba(20,241,149,.25)) !important;box-shadow:0 0 18px rgba(153,69,255,.45),inset 0 1px 0 rgba(255,255,255,.25)}
+html body .rail .nav button.active .ico{animation:snFloat 2.6s ease-in-out infinite}
+@keyframes snFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+
+/* ---------- Live elements ---------- */
+html body .pulse,html body .ck-dot{box-shadow:0 0 0 0 rgba(20,241,149,.6);animation:snPulse 1.8s ease-out infinite}
+@keyframes snPulse{0%{box-shadow:0 0 0 0 rgba(20,241,149,.55)}100%{box-shadow:0 0 0 12px rgba(20,241,149,0)}}
+html body .progress span{background:linear-gradient(90deg,#9945FF,#14F195,#00C2FF,#9945FF) !important;background-size:300% 100% !important;animation:snEdge 3s linear infinite}
+html body #snCockpit .ck-count{font-size:62px}
+html body #ckDial{filter:drop-shadow(0 0 14px rgba(153,69,255,.35))}
+html body .view.active,html body section.view{animation:snViewIn .45s ease both}
+@keyframes snViewIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+html body #hmDash .hm-kpi{animation:snRise .6s ease both}
+html body #hmDash .hm-kpi:nth-child(2){animation-delay:.06s}html body #hmDash .hm-kpi:nth-child(3){animation-delay:.12s}
+html body #hmDash .hm-kpi:nth-child(4){animation-delay:.18s}html body #hmDash .hm-kpi:nth-child(5){animation-delay:.24s}
+@keyframes snRise{from{opacity:0;transform:translateY(14px) scale(.98)}to{opacity:1;transform:none}}
+html body #hmDash .hm-row,html body #gdList button,html body .ck-tape div{transition:background .2s ease,transform .2s ease}
+html body #hmDash .hm-row:hover,html body #gdList button:hover{transform:translateX(3px);background:rgba(153,69,255,.14) !important}
+html body .ck-modal>div{background:linear-gradient(160deg,#241a52,#0f2a33) !important;border-color:rgba(201,167,255,.4) !important;box-shadow:0 30px 80px rgba(8,4,30,.7),0 0 40px rgba(153,69,255,.3)}
+
+/* Desktop sign-in screen */
+html body .desktop-auth-lock{background:radial-gradient(ellipse at 30% 0%,rgba(153,69,255,.45),transparent 55%),radial-gradient(ellipse at 90% 100%,rgba(20,241,149,.25),transparent 55%),linear-gradient(160deg,#160f38,#0c0a1f 55%,#062a26) !important}
+
+/* Scrollbars */
+html body ::-webkit-scrollbar{width:10px;height:8px}
+html body ::-webkit-scrollbar-thumb{background:linear-gradient(180deg,#9945FF,#14F195);border-radius:6px;border:2px solid transparent;background-clip:padding-box}
+html body ::-webkit-scrollbar-track{background:rgba(20,14,48,.6)}
+
+/* ---------- Reduced motion: honour the OS and the in-app setting ---------- */
+@media (prefers-reduced-motion:reduce){
+  #snAurora,#snParticles{display:none}
+  html body *,html body *::before,html body *::after{animation:none !important;transition:none !important}
+}
+.sn-reduce-motion #snAurora,.sn-reduce-motion #snParticles{display:none}
+.sn-reduce-motion *,.sn-reduce-motion *::before,.sn-reduce-motion *::after{animation:none !important}
