@@ -1,0 +1,44 @@
+/* Desktop remaster: full-width SYNBAI composition, never cropped artwork. */
+@media (min-width: 901px) {
+  .shell { width: min(1440px, calc(100% - 72px)); }
+  .site-header { width: min(1500px, calc(100% - 72px)); }
+
+  .hero {
+    grid-template-columns: minmax(0, 1fr) minmax(520px, .96fr);
+    min-height: 0;
+    gap: 72px;
+    padding: 86px 0 78px;
+  }
+
+  .image-feature,
+  .network-section { padding: 88px 0; }
+
+  .image-feature-grid,
+  .network-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 56px 72px;
+  }
+}
+
+/* Keep source artwork at its native wide ratio; no portrait crop or cover mode. */
+.hero-art img,
+.image-feature figure img,
+.network-art img {
+  height: auto !important;
+  aspect-ratio: auto !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  background: #06100c;
+}
+
+.hero-art,
+.image-feature figure,
+.network-art {
+  overflow: visible;
+}
+
+@media (max-width: 900px) {
+  .hero-art img,
+  .image-feature figure img,
+  .network-art img { width: 100%; }
+}
