@@ -52,3 +52,12 @@ quantitative research · systematic strategies · reproducible backtesting · ou
 ## Contributing and feedback
 
 Use the website research pages for the methodology and release notes. Open a GitHub issue for reproducibility problems, documentation gaps or clear product bugs. Please include the app version, operating system, dataset period and the relevant assumptions.
+
+
+## Public research resources
+
+- [Research methodology](docs/RESEARCH-METHODOLOGY.md)
+- [Public repository roadmap](docs/GITHUB-REPOSITORY-ROADMAP.md)
+- [X build-in-public content calendar](docs/X-CONTENT-CALENDAR.md)
+- [Release 0.2.0.1](releases/SYNBAI-Nexus-0.2.0.1.md)
+- [Installer checksum](releases/SYNBAI-Nexus-Setup-0.2.0.1-win-x64.sha256)
