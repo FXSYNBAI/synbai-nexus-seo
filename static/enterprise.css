@@ -43,3 +43,71 @@ body.enterprise-page main .ent-button,body.enterprise-legacy main .ent-button{fo
   .enterprise-legacy main .card,.enterprise-page main .card{padding:18px!important}
   .enterprise-legacy main .scroll,.enterprise-page main .scroll{overflow-x:auto}
 }
+
+
+/* Light editorial theme: indigo, violet and mint on a warm paper canvas. */
+:root{
+  color-scheme:light;
+  --ent-bg:#f7f7fb;
+  --ent-panel:#ffffff;
+  --ent-line:#dfe3ef;
+  --ent-muted:#64708a;
+  --ent-accent:#16a978;
+}
+html body.enterprise-page,html body.enterprise-legacy{
+  background:
+    radial-gradient(900px 540px at 8% -10%,rgba(111,76,255,.14),transparent 64%),
+    radial-gradient(760px 520px at 98% 8%,rgba(39,197,151,.13),transparent 62%),
+    linear-gradient(145deg,#fbfbff 0%,#f4f5fb 55%,#f1fbf7 100%) fixed !important;
+  color:#182039 !important;
+}
+body.enterprise-page,body.enterprise-legacy{background-color:#f7f7fb!important}
+.ent-announcement{background:rgba(255,255,255,.82)!important;border-color:#e1e4ef!important;color:#59657d!important;backdrop-filter:blur(16px)}
+.ent-announcement a{color:#4c3bb8!important}
+.ent-announcement>span{color:#a3abc0!important}
+.ent-header{border-color:#e1e4ef!important}
+.ent-brand-word{color:#5441c8!important}
+.ent-brand-word b{color:#0f9f74!important}
+.ent-nav a,.ent-signin,.ent-header .ent-ecosystem>summary{color:#4f5a73!important}
+.ent-nav a:hover,.ent-signin:hover,.ent-header .ent-ecosystem[open]>summary{color:#0c9f70!important}
+.enterprise-page p{color:#64708a!important}
+.enterprise-page h1,.enterprise-page h2,.enterprise-page h3{color:#182039!important}
+.ent-eyebrow,.ent-number{color:#0c9f70!important}
+.ent-hero h1 span{color:#5b43d2!important}
+.ent-button,.enterprise-page a.ent-button{background:#16a978!important;border-color:#16a978!important;color:#fff!important;box-shadow:0 12px 24px rgba(22,169,120,.16)}
+.ent-button:hover{background:#0d8e65!important}
+.ent-button.secondary,.enterprise-page a.ent-button.secondary{background:#fff!important;border-color:#cfd5e4!important;color:#4c3bb8!important}
+.ent-button.secondary:hover{background:#f1efff!important;border-color:#b9b0ed!important}
+.ent-platforms{border-color:#e1e4ef!important;color:#68748c!important}
+.ent-platforms strong{color:#34405c!important}
+.ent-window{background:#fff!important;border-color:#d9deeb!important;box-shadow:0 24px 70px rgba(54,52,100,.12)!important}
+.ent-window-bar{border-color:#e5e7f0!important;color:#7b8498!important}
+.ent-window figcaption{color:#768198!important}
+.ent-window figcaption b,.ent-showcase-copy a{color:#0c9f70!important}
+.ent-section{border-color:#e1e4ef!important}
+.ent-workflow article{border-color:#cfd5e4!important}
+.ent-tab{color:#68748c!important;border-color:#d6dbea!important;background:#fff!important}
+.ent-tab[aria-selected=true]{background:#eeeafd!important;color:#5140bf!important;border-color:#b9b0ed!important}
+.ent-facts>div,.ent-faq details{border-color:#e1e4ef!important}
+.ent-facts dd{color:#64708a!important}
+.ent-plan,.ent-channel{background:rgba(255,255,255,.88)!important;border-color:#dfe3ef!important;box-shadow:0 14px 35px rgba(45,49,92,.06)}
+.ent-plan.featured{background:#f1fbf7!important;border-color:#87d5bb!important}
+.ent-price small{color:#64708a!important}
+.ent-plan ul{border-color:#e1e4ef!important;color:#526079!important}
+.ent-plan li::before{color:#0c9f70!important}
+.ent-plan [data-price-note] strong{color:#0c9f70!important}
+.ent-footer{border-color:#e1e4ef!important;color:#738097!important}
+.ent-footer a{color:#59657d!important}
+.ent-dropdown{background:#fff!important;border-color:#d9deeb!important;box-shadow:0 20px 45px rgba(45,49,92,.14)!important}
+.ent-header .ent-dropdown a{color:#4f5a73!important}
+.ent-header .ent-dropdown a:hover,.ent-header .ent-dropdown a:focus-visible{background:#f1efff!important;color:#5140bf!important}
+.ent-mobile-nav summary{color:#4f5a73!important}
+.ent-mobile-nav nav{background:#fff!important;border-color:#d9deeb!important;box-shadow:0 18px 40px rgba(45,49,92,.14)!important}
+.ent-mobile-nav nav a{color:#4f5a73!important}
+.ent-state{color:#64708a!important;border-color:#d0d6e4!important}
+.ent-channel dt{color:#7a849a!important}
+.ent-channel dd{color:#34405c!important}
+.ent-checklist{color:#64708a!important}
+.ent-note{border-color:#87d5bb!important}
+.ent-skip{background:#16a978!important;color:#fff!important}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline-color:#5b43d2!important}
