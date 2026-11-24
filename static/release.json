@@ -1,4 +1,10 @@
 {
-  "windows": { "url": "https://downloads.fxsynbai.eu/SYNBAI-Nexus-Setup-0.2.1.0-win-x64.exe", "version": "0.2.1.0", "published": "Nov 24, 2026", "size": "34.8 MB", "sha256": "9EE683716F5B3644C3C1BC26DA27FE3F9411427F9F467F357B42C6AF49B6BC43" },
+  "windows": {
+    "url": "https://github.com/FXSYNBAI/synbai-nexus-seo/releases/download/v0.2.1.0/SYNBAI-Nexus-Setup-0.2.1.0-win-x64.exe",
+    "version": "0.2.1.0",
+    "published": "Nov 24, 2026",
+    "size": "34.8 MB",
+    "sha256": "F2491C68619BA4BD09153FF5C4AF89700343DFC8786ED8D6DF9CBEE7590F3159"
+  },
   "store": { "url": "" }
 }
