@@ -163,3 +163,13 @@ html body.enterprise-page,html body.enterprise-legacy{background-color:#f7f7fb!i
 .enterprise-legacy main .comparison th{color:#182039!important}
 .enterprise-legacy main .comparison-mark.yes{color:#0c9f70!important}.enterprise-legacy main .comparison-mark.no{color:#a16b84!important}
 .enterprise-legacy main .upgrade-option{border:1px solid #dfe3ef!important}.enterprise-legacy main .upgrade-price{color:#5140bf!important}
+
+
+/* Download page final light correction: no dark cards, no low-contrast inherited text. */
+body.enterprise-page .ent-release{background:transparent!important}
+body.enterprise-page .ent-channel{background:#fff!important;background-image:none!important;color:#182039!important;border:1px solid #dfe3ef!important;box-shadow:0 14px 35px rgba(45,49,92,.08)!important}
+body.enterprise-page .ent-channel h2,body.enterprise-page .ent-channel h3,body.enterprise-page .ent-channel strong{color:#182039!important;text-shadow:none!important}
+body.enterprise-page .ent-channel p,body.enterprise-page .ent-channel li,body.enterprise-page .ent-channel dd,body.enterprise-page .ent-channel dt{color:#59657d!important;text-shadow:none!important}
+body.enterprise-page .ent-channel .ent-state{background:#f1fbf7!important;color:#0c9f70!important;border-color:#87d5bb!important}
+body.enterprise-page .ent-channel .ent-button{background:#16a978!important;color:#fff!important;border-color:#16a978!important}
+body.enterprise-page .ent-channel dl{border-color:#e1e4ef!important}
