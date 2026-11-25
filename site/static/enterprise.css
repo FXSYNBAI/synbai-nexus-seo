@@ -194,3 +194,204 @@ body.cyber-shell :is(.cyber-header,.cyber-systemline,.cyber-hero,.cyber-inventor
 body.cyber-shell :is(.button,.btn,button[type=submit],a.button),body:not(.enterprise-page):not(.enterprise-legacy) :is(.button,.btn,button[type=submit],a.button){background:#16a978!important;color:#fff!important;border-color:#16a978!important}
 body.cyber-shell :is(input,textarea,select),body:not(.enterprise-page):not(.enterprise-legacy) :is(input,textarea,select){background:#fff!important;color:#182039!important;border-color:#cfd5e4!important}
 body.cyber-shell footer,body:not(.enterprise-page):not(.enterprise-legacy) footer{background:transparent!important;color:#738097!important;border-color:#e1e4ef!important}
+
+/* Definitive light card system: one surface language across every site family. */
+:root{
+  --sn-card-bg:#fff;
+  --sn-card-featured:#f1fbf7;
+  --sn-card-violet:#f6f3ff;
+  --sn-card-border:#dfe3ef;
+  --sn-card-text:#182039;
+  --sn-card-muted:#59657d;
+  --sn-card-shadow:0 14px 35px rgba(45,49,92,.08);
+}
+html body.enterprise-page :is(
+  .ent-plan,.ent-channel,.card,.plan,.content-card,.pricing-card,.faq-item,.panel,
+  .feature-card,.stat-card,.notice,.banner,.box,.table-wrap,.comparison-card,
+  .billing-card,.lifetime-billing-card,.hero-panel,.upgrade-box,.upgrade-option,
+  .step,.banner-card,.choice,.nexus-ai-window
+),
+html body.enterprise-legacy :is(
+  .ent-plan,.ent-channel,.card,.plan,.content-card,.pricing-card,.faq-item,.panel,
+  .feature-card,.stat-card,.notice,.banner,.box,.table-wrap,.comparison-card,
+  .billing-card,.lifetime-billing-card,.hero-panel,.upgrade-box,.upgrade-option,
+  .step,.banner-card,.choice,.nexus-ai-window
+),
+html body.cyber-shell :is(
+  .cyber-hero,.cyber-inventory,.ecosystem-hero,.ecosystem-card,.x-banner-card,
+  .synbai-unicorn-feature,.fc-card,.fc-step-card,.vip-card,.vip-console,
+  .demo-content,.rig-card,.rig,.stat-card,.stat,.metric-card,.feature-card,.card,
+  .section-head,.token-card,.whitepaper-card,.phase,.phase-card,.tokenomics-panel,
+  .tokenomics-card,.terminal-module,.inventory-section,.signal-preview,.library-card,
+  .library-search,.library-hero,.research-card,.drop-card,.info-card,.wp-section,
+  .prototype-notice,.notification-banner,.terminal-notice,.notice,.panel,.box
+),
+html body:not(.enterprise-page):not(.enterprise-legacy):not(.cyber-shell) :is(
+  .ecosystem-hero,.ecosystem-card,.card,.panel,.section-card,.content-card,.channel,
+  .notice,.banner,.feature-card,.stat-card,.token-card,.vip-card,.drop-card,.info-card,
+  .phase-card,.tokenomics-card,.tokenomics-panel,.terminal-module,.research-card
+){
+  background:var(--sn-card-bg)!important;
+  background-color:var(--sn-card-bg)!important;
+  background-image:none!important;
+  border-color:var(--sn-card-border)!important;
+  color:var(--sn-card-text)!important;
+  box-shadow:var(--sn-card-shadow)!important;
+  text-shadow:none!important;
+}
+html body.enterprise-page :is(.ent-plan.featured,.featured,.recommended),
+html body.enterprise-legacy :is(.ent-plan.featured,.featured,.recommended,.plan.recommended),
+html body.cyber-shell :is(.featured,.recommended,.active),
+html body:not(.enterprise-page):not(.enterprise-legacy):not(.cyber-shell) :is(.featured,.recommended){
+  background:var(--sn-card-featured)!important;
+  background-color:var(--sn-card-featured)!important;
+  background-image:none!important;
+  border-color:#87d5bb!important;
+}
+html body.cyber-shell :is(.vip-card.commander,.pass-option.commander){
+  background:var(--sn-card-violet)!important;
+  background-color:var(--sn-card-violet)!important;
+  background-image:none!important;
+  border-color:#cfc5ef!important;
+}
+html body.enterprise-page :is(.ent-plan,.ent-channel,.card,.plan,.panel,.feature-card,.stat-card,.billing-card,.banner-card,.choice) :is(h1,h2,h3,h4,strong,dt,summary),
+html body.enterprise-legacy :is(.ent-plan,.ent-channel,.card,.plan,.panel,.feature-card,.stat-card,.billing-card,.banner-card,.choice) :is(h1,h2,h3,h4,strong,dt,summary),
+html body.cyber-shell :is(.cyber-hero,.cyber-inventory,.ecosystem-hero,.ecosystem-card,.vip-card,.token-card,.tokenomics-card,.tokenomics-panel,.phase-card,.terminal-module,.research-card,.info-card,.stat-card) :is(h1,h2,h3,h4,strong,dt,summary){
+  color:var(--sn-card-text)!important;
+  text-shadow:none!important;
+}
+html body.enterprise-page :is(.ent-plan,.ent-channel,.card,.plan,.panel,.feature-card,.stat-card,.billing-card,.banner-card,.choice) :is(p,li,dd,small,label),
+html body.enterprise-legacy :is(.ent-plan,.ent-channel,.card,.plan,.panel,.feature-card,.stat-card,.billing-card,.banner-card,.choice) :is(p,li,dd,small,label),
+html body.cyber-shell :is(.cyber-hero,.cyber-inventory,.ecosystem-hero,.ecosystem-card,.vip-card,.token-card,.tokenomics-card,.tokenomics-panel,.phase-card,.terminal-module,.research-card,.info-card,.stat-card) :is(p,li,dd,small,label){
+  color:var(--sn-card-muted)!important;
+  text-shadow:none!important;
+}
+html body.enterprise-page :is(.ent-plan,.ent-channel,.card,.plan,.panel,.feature-card,.stat-card,.billing-card,.banner-card,.choice) :is(.eyebrow,.ent-eyebrow,.kicker,.label),
+html body.enterprise-legacy :is(.ent-plan,.ent-channel,.card,.plan,.panel,.feature-card,.stat-card,.billing-card,.banner-card,.choice) :is(.eyebrow,.ent-eyebrow,.kicker,.label),
+html body.cyber-shell :is(.cyber-hero,.cyber-inventory,.ecosystem-hero,.ecosystem-card,.vip-card,.token-card,.tokenomics-card,.tokenomics-panel,.phase-card,.terminal-module,.research-card,.info-card,.stat-card) :is(.eyebrow,.kicker,.label,.ecosystem-card-kicker,.tokenomics-kicker){
+  color:#0c9f70!important;
+}
+html body.cyber-shell :is(.ecosystem-card,.research-card,.library-card){transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease!important}
+html body.cyber-shell :is(.ecosystem-card,.research-card,.library-card):is(:hover,:focus-visible){border-color:#87d5bb!important;box-shadow:0 18px 44px rgba(45,49,92,.13)!important;transform:translateY(-3px)}
+
+/* WCAG contrast pass for text inherited from the former dark/neon theme. */
+:root{--sn-accent:#087a57;--sn-action:#087a57}
+html body :is(
+  .ent-plan,.ent-channel,.card,.plan,.content-card,.pricing-card,.faq-item,.panel,
+  .feature-card,.stat-card,.notice,.banner,.box,.table-wrap,.comparison-card,
+  .billing-card,.lifetime-billing-card,.hero-panel,.upgrade-box,.upgrade-option,
+  .step,.banner-card,.choice,.nexus-ai-window,.cyber-hero,.cyber-inventory,
+  .ecosystem-hero,.ecosystem-card,.x-banner-card,.synbai-unicorn-feature,.fc-card,
+  .fc-step-card,.vip-card,.vip-console,.demo-content,.rig-card,.rig,.stat,.metric-card,
+  .section-head,.token-card,.whitepaper-card,.phase,.phase-card,.tokenomics-panel,
+  .tokenomics-card,.terminal-module,.inventory-section,.signal-preview,.library-card,
+  .library-search,.library-hero,.research-card,.drop-card,.info-card,.wp-section,
+  .prototype-notice,.notification-banner,.terminal-notice,.section-card,.channel
+) :is(p,li,dd,small,label,td,th,figcaption,em,span){color:var(--sn-card-muted)!important;text-shadow:none!important}
+html body :is(
+  .ent-plan,.ent-channel,.card,.plan,.content-card,.pricing-card,.faq-item,.panel,
+  .feature-card,.stat-card,.notice,.banner,.box,.table-wrap,.comparison-card,
+  .billing-card,.lifetime-billing-card,.hero-panel,.upgrade-box,.upgrade-option,
+  .step,.banner-card,.choice,.nexus-ai-window,.cyber-hero,.cyber-inventory,
+  .ecosystem-hero,.ecosystem-card,.x-banner-card,.synbai-unicorn-feature,.fc-card,
+  .fc-step-card,.vip-card,.vip-console,.demo-content,.rig-card,.rig,.stat,.metric-card,
+  .section-head,.token-card,.whitepaper-card,.phase,.phase-card,.tokenomics-panel,
+  .tokenomics-card,.terminal-module,.inventory-section,.signal-preview,.library-card,
+  .library-search,.library-hero,.research-card,.drop-card,.info-card,.wp-section,
+  .prototype-notice,.notification-banner,.terminal-notice,.section-card,.channel
+) :is(h1,h2,h3,h4,h5,h6,strong,dt,summary,legend){color:var(--sn-card-text)!important;text-shadow:none!important}
+html body :is(
+  .ent-plan,.ent-channel,.card,.plan,.content-card,.pricing-card,.faq-item,.panel,
+  .feature-card,.stat-card,.notice,.banner,.box,.table-wrap,.comparison-card,
+  .billing-card,.lifetime-billing-card,.hero-panel,.upgrade-box,.upgrade-option,
+  .step,.banner-card,.choice,.nexus-ai-window,.cyber-hero,.cyber-inventory,
+  .ecosystem-hero,.ecosystem-card,.x-banner-card,.synbai-unicorn-feature,.fc-card,
+  .fc-step-card,.vip-card,.vip-console,.demo-content,.rig-card,.rig,.stat,.metric-card,
+  .section-head,.token-card,.whitepaper-card,.phase,.phase-card,.tokenomics-panel,
+  .tokenomics-card,.terminal-module,.inventory-section,.signal-preview,.library-card,
+  .library-search,.library-hero,.research-card,.drop-card,.info-card,.wp-section,
+  .prototype-notice,.notification-banner,.terminal-notice,.section-card,.channel
+) a:not(.button):not(.btn):not(.ent-button):not(.cyber-primary):not(.cyber-secondary){color:#5140bf!important}
+html body :is(.eyebrow,.ent-eyebrow,.kicker,.label,.tier,.step-num,.ent-state,
+  .ecosystem-kicker,.ecosystem-card-kicker,.tokenomics-kicker,.library-chip,
+  .research-category,.research-year,.phase-tag,.tag,.stat-value,.value,.n){color:var(--sn-accent)!important}
+html body :is(.button,.btn,.ent-button,button[type=submit],a.button,a.cyber-primary){background:var(--sn-action)!important;background-image:none!important;border-color:var(--sn-action)!important;color:#fff!important}
+html body :is(.button,.btn,.ent-button,button[type=submit],a.button,a.cyber-primary) *{color:#fff!important}
+html body :is(.button.secondary,.btn.secondary,.ent-button.secondary,a.cyber-secondary){background:#fff!important;color:#5140bf!important;border-color:#b9b0ed!important}
+html body :is(.button.secondary,.btn.secondary,.ent-button.secondary,a.cyber-secondary) *{color:#5140bf!important}
+
+/* Nested panels and data tables are cards too; keep them on the same paper palette. */
+html body.cyber-shell :is(.tokenomics-metrics article,.tokenomics-table-wrap,.tokenomics-table,
+  .tokenomics-table thead th,.tokenomics-table tbody th,.tokenomics-table td,
+  .tokenomics-table tr,.tokenomics-total th,.tokenomics-total td,.tokenomics-math,
+  .tokenomics-status,.vip-missions article,.pass-options label,.ecosystem-status){
+  background:#fff!important;background-image:none!important;border-color:var(--sn-card-border)!important;
+  color:var(--sn-card-muted)!important;text-shadow:none!important
+}
+html body.cyber-shell :is(.tokenomics-table th,.tokenomics-table td){color:var(--sn-card-muted)!important}
+html body.cyber-shell :is(.tokenomics-table th,.tokenomics-metrics strong,.tokenomics-status strong,
+  .vip-missions h2,.pass-options strong){color:var(--sn-card-text)!important}
+html body.cyber-shell :is(.pass-options label:has(input:checked),.ecosystem-status){background:var(--sn-card-featured)!important;border-color:#87d5bb!important}
+
+/* Beat page-local legacy selectors without touching the shared dark header/navigation. */
+html body.enterprise-page :is(.ent-eyebrow,.ent-state),
+html body.enterprise-legacy :is(.eyebrow,.tier,.step-num,.discount-badge,.save-chip,.recommended-text){color:var(--sn-accent)!important}
+html body.enterprise-page :is(a.ent-button,button.ent-button),
+html body.enterprise-legacy :is(a.button,button.button,.btn){background:var(--sn-action)!important;background-image:none!important;border-color:var(--sn-action)!important;color:#fff!important}
+html body.cyber-shell :is(.cyber-kicker,.ecosystem-kicker,.ecosystem-card-kicker,
+  .tokenomics-kicker,.library-chip,.research-category,.research-year,.phase-tag,.tag,
+  .stat-value,.vip-perk,.planned){color:var(--sn-accent)!important}
+html body.cyber-shell :is(a.cyber-primary,a.button,button:not(.wallet-site-connect):not(.ent-wallet)){
+  background:var(--sn-action)!important;background-image:none!important;border-color:var(--sn-action)!important;color:#fff!important
+}
+html body.cyber-shell :is(a.cyber-primary,a.button,button:not(.wallet-site-connect):not(.ent-wallet)) *{color:#fff!important}
+html body.cyber-shell a.cyber-secondary{background:#fff!important;color:#5140bf!important;border-color:#b9b0ed!important}
+html body.cyber-shell a.cyber-secondary *{color:#5140bf!important}
+html body.cyber-shell :is(.ecosystem-cta,.ecosystem-status){background:var(--sn-card-featured)!important;border-color:#87d5bb!important;color:var(--sn-accent)!important}
+html body.cyber-shell .vip-price{color:var(--sn-card-text)!important}
+html body.cyber-shell .price-base,html body.enterprise-legacy .price-base{color:#68748c!important}
+
+/* AI support is an application card, but follows the same bright surface system. */
+html body.enterprise-legacy .nexus-ai-window :is(.nexus-ai-topline,.nexus-ai-messages,
+  .nexus-ai-message,.nexus-ai-message.user,.nexus-ai-suggestions button,.nexus-ai-composer){
+  background:#fff!important;background-image:none!important;border-color:var(--sn-card-border)!important;color:var(--sn-card-text)!important
+}
+html body.enterprise-legacy .nexus-ai-window :is(.nexus-ai-subtitle,.nexus-ai-account,
+  .nexus-ai-bottomline,.nexus-ai-disclaimer,.nexus-ai-message p){color:var(--sn-card-muted)!important}
+html body.enterprise-legacy .nexus-ai-window :is(.nexus-ai-message strong,.nexus-ai-suggestions button span,
+  .nexus-ai-bottomline a){color:var(--sn-accent)!important}
+html body.enterprise-legacy .nexus-ai-window .nexus-ai-composer textarea{background:#fff!important;color:var(--sn-card-text)!important}
+html body.enterprise-legacy .nexus-ai-window .nexus-ai-composer textarea::placeholder{color:#68748c!important}
+html body.enterprise-legacy .nexus-ai-window .nexus-ai-composer button{background:var(--sn-action)!important;color:#fff!important}
+
+/* Demo/VIP inner sections were previously dark islands inside light cards. */
+html body.cyber-shell :is(.demo-content section,.demo-content .rig,.vip-console fieldset,
+  .vip-missions article,.pass-options label){background:#fff!important;background-image:none!important;border-color:var(--sn-card-border)!important;color:var(--sn-card-text)!important}
+html body.cyber-shell :is(.demo-content section,.demo-content .rig,.vip-console fieldset,
+  .vip-missions article,.pass-options label) :is(h1,h2,h3,strong,legend){color:var(--sn-card-text)!important}
+html body.cyber-shell :is(.demo-content section,.demo-content .rig,.vip-console fieldset,
+  .vip-missions article,.pass-options label) :is(p,small,span,label){color:var(--sn-card-muted)!important}
+
+/* Final specificity locks for badges and embedded calls-to-action. */
+html body.enterprise-page :is(.ent-plan,.ent-channel) :is(.ent-eyebrow,.ent-state){color:var(--sn-accent)!important}
+html body.enterprise-page .ent-channel .ent-button{background:var(--sn-action)!important;background-image:none!important;border-color:var(--sn-action)!important;color:#fff!important}
+html body.enterprise-legacy main :is(.card,.plan,.step,.billing-card,.hero-panel) :is(.eyebrow,.tier,.step-num,.discount-badge){color:var(--sn-accent)!important}
+html body :is(s,del,.price-base){color:#59657d!important}
+html body.cyber-shell .tokenomics-panel .tokenomics-kicker{color:var(--sn-accent)!important}
+html body.cyber-shell :is(.planned,.chain-badge,.phase-tag,.tag){background:var(--sn-card-featured)!important;border-color:#87d5bb!important;color:var(--sn-accent)!important}
+html body.cyber-shell :is(.mint-address,.vip-symbol,.x-banner-handle){background:transparent!important;color:var(--sn-card-muted)!important}
+html body.cyber-shell .vip-symbol{background:var(--sn-card-featured)!important;color:var(--sn-accent)!important;border-color:#87d5bb!important}
+html body.cyber-shell .cyber-inventory :is(b,strong){color:#5140bf!important}
+html body.cyber-shell .x-banner-link{background:#fff!important;background-image:none!important;border-color:var(--sn-card-border)!important;color:#5140bf!important}
+html body.cyber-shell .x-banner-link *{background:transparent!important;color:var(--sn-card-muted)!important}
+html body:not(.enterprise-page):not(.enterprise-legacy):not(.cyber-shell) :is(.ecosystem-status,.ecosystem-cta){
+  background:var(--sn-card-featured)!important;background-image:none!important;border-color:#87d5bb!important;color:var(--sn-accent)!important
+}
+html body:not(.enterprise-page):not(.enterprise-legacy):not(.cyber-shell) :is(.ecosystem-status,.ecosystem-cta) *{color:var(--sn-accent)!important}
+html body.cyber-shell .cyber-pass{color:#fff!important}
+html body.cyber-shell .cyber-pass .cyber-pass-meta span{color:#cbd5e1!important}
+html body.cyber-shell .cyber-pass .cyber-pass-meta b{color:#fff!important}
+html body.cyber-shell :is(.drop-number,.drop-foot){color:#5140bf!important}
+html body.cyber-shell .library-hero-art{background:var(--sn-card-violet)!important;background-image:none!important;border-color:#cfc5ef!important;color:var(--sn-card-text)!important}
+html body.cyber-shell .library-hero-art span{color:var(--sn-card-muted)!important}
+html body.enterprise-legacy main .plan del.price-base{color:#59657d!important}
