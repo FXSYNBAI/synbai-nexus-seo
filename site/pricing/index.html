@@ -215,17 +215,21 @@ td{color:#4f5873!important}
         </article>
         <article class="plan">
           <div class="tier">Build your routine</div><h2>Starter</h2><p class="plan-desc">For regular research with predictable monthly limits.</p>
-          <div class="price price-comparison" id="starterPrice"><span class="price-current">$18 <small>/ month</small></span><del class="price-base">$20 <small>/ month</small></del><span class="discount-badge">10% OFF</span></div><p class="price-caption" id="starterMonthlyCaption">Billed monthly. Cancel any time.</p><div class="annual-detail" id="starterAnnual"><strong>Paid once per year.</strong><span>Compare the current annual saving above.</span></div><div class="annual-detail lifetime-detail" id="starterLifetime"><strong>$299 one time</strong><span>Permanent Starter access. Application Credit can be applied at 2× face value.</span></div>
+          <div class="price price-comparison" id="starterPrice"><span class="price-current">$5.99 <small>/ month</small></span><span class="discount-badge">GLOBAL LAUNCH</span></div><p class="price-caption" id="starterMonthlyCaption">Billed monthly. Cancel any time.</p><div class="annual-detail" id="starterAnnual"><strong>Paid once per year.</strong><span>Compare the current annual saving above.</span></div><div class="annual-detail lifetime-detail" id="starterLifetime"><strong>$59 one time</strong><span>Permanent Starter access. Application Credit can be applied at 2× face value.</span></div>
           <a class="btn secondary purchase-link" data-plan="starter" href="https://fxsynbai.eu/account/?purchase=starter&interval=monthly">Choose Starter <span aria-hidden="true">→</span></a>
           <ul><li>Unlimited Monte Carlo robustness checks</li><li>30 Pearson correlations per month</li><li>30 MQL5 and Pine Script v6 exports per month, shared total</li><li>External MQL5/Pine Script source imports: 30 per month</li><li>Import, edit and re-export Pine Script v6</li><li>Genetic search: 10 × 100 × 40 generations, fixed</li><li>Save up to 30 Custom Presets</li></ul><p class="fine">Annual billing is paid once per year.</p>
         </article>
         <article class="plan recommended">
           <div class="ribbon">RECOMMENDED</div><div class="tier">Full research capacity</div><h2>Pro</h2><p class="plan-desc">For deeper research, flexible genetic runs and an expanding strategy archive.</p>
-          <div class="price price-comparison" id="proPrice"><span class="price-current">$36 <small>/ month</small></span><del class="price-base">$40 <small>/ month</small></del><span class="discount-badge">10% OFF</span></div><p class="price-caption" id="proMonthlyCaption">Billed monthly. Cancel any time.</p><div class="annual-detail" id="proAnnual"><strong>Paid once per year.</strong><span>Compare the current annual saving above.</span></div><div class="annual-detail lifetime-detail" id="proLifetime"><strong>$598 one time</strong><span>Permanent Pro access. Application Credit can be applied at 2× face value.</span></div>
+          <div class="price price-comparison" id="proPrice"><span class="price-current">$12.99 <small>/ month</small></span><span class="discount-badge">GLOBAL LAUNCH</span></div><p class="price-caption" id="proMonthlyCaption">Billed monthly. Cancel any time.</p><div class="annual-detail" id="proAnnual"><strong>Paid once per year.</strong><span>Compare the current annual saving above.</span></div><div class="annual-detail lifetime-detail" id="proLifetime"><strong>$118 one time</strong><span>Permanent Pro access. Application Credit can be applied at 2× face value.</span></div>
           <a class="btn purchase-link" data-plan="pro" href="https://fxsynbai.eu/account/?purchase=pro&interval=monthly">Choose Pro <span aria-hidden="true">→</span></a>
           <ul><li>Unlimited Monte Carlo tests and Pearson correlations</li><li>Unlimited MQL5/Pine Script exports and strategy archive</li><li>External MQL5/Pine Script source imports: unlimited</li><li>Import, edit and re-export Pine Script v6</li><li>Choose 1–20 genetic islands</li><li>Population 75–150 per island, in steps of 5</li><li>40 generations by default; adjustable from 1–60</li><li>Adjust crossover rate</li><li>Unlimited saved Custom Presets</li></ul><p class="fine">Annual billing is paid once per year.</p>
         </article>
       </div>
+    </section>
+    <section class="section" id="passes" aria-labelledby="passes-title">
+      <div class="section-heading"><div class="eyebrow">7-day access</div><h2 id="passes-title">Try a paid plan for one week</h2><p>Use a one-time Pass when you want to test the workflow before choosing monthly, annual or Lifetime access.</p></div>
+      <div class="billing-grid"><article class="billing-card"><h3>Starter Pass · $2.99</h3><p>7 days of Starter access. One-time payment.</p><a class="btn secondary" href="/account/?purchase=starter&interval=pass">Get Starter Pass →</a></article><article class="billing-card"><h3>Pro Pass · $5.99</h3><p>7 days of Pro access. One-time payment.</p><a class="btn" href="/account/?purchase=pro&interval=pass">Get Pro Pass →</a></article></div>
     </section>
     <section class="upgrade-box" id="starter-upgrade" aria-labelledby="starter-upgrade-title">
       <div class="eyebrow">For current Starter customers</div>
@@ -290,21 +294,21 @@ td{color:#4f5873!important}
         function money(cents){return '$'+(cents/100).toFixed(2).replace(/\.00$/,'')}
         function priceMarkup(plan, mode){
           if(mode==='lifetime'){
-            var life=pricingData?.lifetime_prices?.[plan]||{list:plan==='starter'?34900:69800,sale:plan==='starter'?29900:59800,discount_amount:plan==='starter'?5000:10000,discount_label:plan==='starter'?'$50 OFF':'$100 OFF'};
+            var life=pricingData?.lifetime_prices?.[plan]||{list:plan==='starter'?5900:11800,sale:plan==='starter'?5900:11800,discount_amount:0,discount_label:''};
             if(!life.discount_amount)return '<span class="price-current">'+money(life.sale)+' <small>one time</small></span>';
             return '<span class="price-current">'+money(life.sale)+' <small>one time</small></span><del class="price-base">'+money(life.list)+' <small>one time</small></del><span class="discount-badge">'+life.discount_label+'</span>';
           }
-          var fallbackBase={starter:{monthly:2000,annual:24000},pro:{monthly:4000,annual:48000}};
-          var fallbackSale={starter:{monthly:1800,annual:18960},pro:{monthly:3600,annual:37920}};
+          var fallbackBase={starter:{monthly:599,annual:4900},pro:{monthly:1299,annual:9900}};
+          var fallbackSale=fallbackBase;
           var current=pricingData?.plans?.[plan]?.[mode]??fallbackSale[plan][mode];
           var base=pricingData?.base_prices?.[plan]?.[mode]??fallbackBase[plan][mode];
-          var discount=pricingData?.discount_percent?.[plan]?.[mode]??(mode==='annual'?21:10);
+          var discount=pricingData?.discount_percent?.[plan]?.[mode]??0;
           var period=mode==='annual'?'year':'month';
           return '<span class="price-current">'+money(current)+' <small>/ '+period+'</small></span><del class="price-base">'+money(base)+' <small>/ '+period+'</small></del><span class="discount-badge">'+discount+'% OFF</span>';
         }
         document.getElementById('starterPrice').innerHTML=priceMarkup('starter',mode);
         document.getElementById('proPrice').innerHTML=priceMarkup('pro',mode);
-        var lifePrices=pricingData?.lifetime_prices||{starter:{list:34900,sale:29900,discount_amount:5000,discount_label:'$50 OFF'},pro:{list:69800,sale:59800,discount_amount:10000,discount_label:'$100 OFF'}};
+        var lifePrices=pricingData?.lifetime_prices||{starter:{list:5900,sale:5900,discount_amount:0,discount_label:''},pro:{list:11800,sale:11800,discount_amount:0,discount_label:''}};
         var lifePrefix=pricingData?.winter_sale_active?'Winter Sale · ':'Permanent access · ';
         document.getElementById('starterLifetime').innerHTML='<strong>'+lifePrefix+money(lifePrices.starter.sale)+' one time</strong><span>'+(lifePrices.starter.discount_amount?'<del>'+money(lifePrices.starter.list)+'</del> · '+lifePrices.starter.discount_label+'. ':'')+'Permanent Starter access. Application Credit is applied separately from checkout discounts.</span>';
         document.getElementById('proLifetime').innerHTML='<strong>'+lifePrefix+money(lifePrices.pro.sale)+' one time</strong><span>'+(lifePrices.pro.discount_amount?'<del>'+money(lifePrices.pro.list)+'</del> · '+lifePrices.pro.discount_label+'. ':'')+'Permanent Pro access. Application Credit is applied separately from checkout discounts.</span>';
