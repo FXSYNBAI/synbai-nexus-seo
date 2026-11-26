@@ -26,4 +26,34 @@ main{max-width:var(--shell-max);margin:clamp(28px,4vw,48px) auto;padding:0 clamp
 </script><script src="/static/nexus-wallet-auth.js?v=wallet-session-unified-20261115" defer></script>
 
 <script src="/static/enterprise.js" defer></script>
+<script>
+// Google Ads sign-up conversion: fire only after the account was actually created.
+(() => {
+  const register = document.querySelector('#register');
+  const message = document.querySelector('#message');
+  if (!register || !message) return;
+  const original = register.onclick;
+  register.onclick = async () => {
+    await original?.();
+    if (message.textContent.trim() !== 'Account created.') return;
+    const email = document.querySelector('#email')?.value.trim();
+    const password = document.querySelector('#password')?.value;
+    if (!email || !password) return;
+    try {
+      const response = await fetch('https://api.fxsynbai.eu/api/auth/login', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        credentials: 'include',
+        body: JSON.stringify({email, password})
+      });
+      if (!response.ok) return;
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', 'ads_conversion_Abona_i_v__1');
+      }
+      message.textContent = 'Account created and signed in.';
+      setTimeout(() => location.assign('/?welcome=1'), 800);
+    } catch (_) {}
+  };
+})();
+</script>
 </body></html>
