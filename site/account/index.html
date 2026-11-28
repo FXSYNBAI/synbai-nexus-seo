@@ -43,4 +43,9 @@ main{max-width:var(--shell-max);margin:clamp(28px,4vw,48px) auto;padding:0 clamp
   report();
 })();
 </script>
+<script>
+// Keep the no-JavaScript/API-fallback copy aligned with the live Stripe catalogue.
+document.querySelector('[data-plan-price="starter"]')?.replaceChildren(document.createTextNode('$5.99 '), Object.assign(document.createElement('small'), {textContent:'/ month'}));
+document.querySelector('[data-plan-price="pro"]')?.replaceChildren(document.createTextNode('$12.99 '), Object.assign(document.createElement('small'), {textContent:'/ month'}));
+</script>
 </body></html>
